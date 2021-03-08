@@ -1,0 +1,14 @@
+name: Hello!
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  hello_world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: |
+          echo "Hello through ubuntu-latest"
