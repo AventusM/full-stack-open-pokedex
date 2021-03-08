@@ -12,3 +12,9 @@ jobs:
       - name: Print greeting
         run: |
           echo "Hello through ubuntu-latest"
+      - name: Time now
+        run: |
+          date
+      - name: Current directory content
+        run: |
+          ls
