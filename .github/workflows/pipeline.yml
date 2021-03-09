@@ -33,3 +33,5 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: pokedex-full-stack-open-antonm
           heroku_email: 8antonm@gmail.com
+          healthcheck: https://pokedex-full-stack-open-antonm.herokuapp.com/health
+          checkstring: OK!

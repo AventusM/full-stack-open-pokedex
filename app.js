@@ -6,6 +6,14 @@ const PORT = process.env.PORT || 5000
 
 app.use(express.static('dist'))
 
+app.get('/health', (req, res) => {
+  res.send('OK!')
+})
+
+app.get('/version', (req, res) => {
+  res.send('1')
+})
+
 app.listen(PORT, () => {
   // Alternative could be to set no-console to 'off' in eslintrc
   // The 11.6 task image hints at removing the console.log in PokemonPage.jsx and just disabling the rule
