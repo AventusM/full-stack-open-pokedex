@@ -9,7 +9,7 @@ jobs:
   simple_deployment_pipeline:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2 # Should cover the duplicate key with heroku deployment
       - uses: actions/setup-node@v1
         with:
           node-version: "12.x"
@@ -27,3 +27,9 @@ jobs:
           command: npm run test:e2e
           start: npm run start-prod
           wait-on: http://localhost:5000
+      - name: heroku deployment
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: pokedex-full-stack-open-antonm
+          heroku_email: 8antonm@gmail.com
