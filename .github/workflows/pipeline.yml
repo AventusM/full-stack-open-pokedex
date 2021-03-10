@@ -40,6 +40,13 @@ jobs:
           healthcheck: https://pokedex-full-stack-open-antonm.herokuapp.com/health
           checkstring: OK!
           rollbackonhealthcheckfailed: true
+  tag_new_version:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
       - name: Bump version and push tag
         if: ${{ github.event_name == 'push' }}
         uses: anothrNick/github-tag-action@1.33.0
