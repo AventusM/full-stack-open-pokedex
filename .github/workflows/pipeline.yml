@@ -41,6 +41,7 @@ jobs:
           checkstring: OK!
           rollbackonhealthcheckfailed: true
   tag_new_version:
+    needs: simple_deployment_pipeline
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
@@ -54,6 +55,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DEFAULT_BUMP: patch
   slack_status:
+    needs: simple_deployment_pipeline
     runs-on: ubuntu-18.04
     steps:
       - uses: 8398a7/action-slack@v3
