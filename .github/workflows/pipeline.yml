@@ -53,7 +53,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DEFAULT_BUMP: patch
-  success_status_job_slack:
+  slack_status:
     runs-on: ubuntu-18.04
     steps:
       - uses: 8398a7/action-slack@v3
@@ -70,9 +70,6 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         if: success()
-  failure_status_job_slack:
-    runs-on: ubuntu-18.04
-    steps:
       - uses: 8398a7/action-slack@v3
         with:
           status: ${{ job.status }}
