@@ -25,6 +25,7 @@ const App = () => {
     return <ErrorMessage error={error} />
   }
 
+  crashThisBuild!!!
   return (
     <Router>
       <Switch>
