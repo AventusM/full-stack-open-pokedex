@@ -56,6 +56,7 @@ jobs:
           DEFAULT_BUMP: patch
   slack_status:
     needs: simple_deployment_pipeline
+    if: always()
     runs-on: ubuntu-18.04
     steps:
       - uses: 8398a7/action-slack@v3
