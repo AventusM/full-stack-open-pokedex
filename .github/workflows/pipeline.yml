@@ -38,7 +38,7 @@ jobs:
           heroku_app_name: pokedex-full-stack-open-antonm
           heroku_email: 8antonm@gmail.com
           healthcheck: https://pokedex-full-stack-open-antonm.herokuapp.com/health
-          checkstring: OK!
+          checkstring: Okay
           rollbackonhealthcheckfailed: true
   tag_new_version:
     needs: simple_deployment_pipeline
