@@ -13,3 +13,7 @@ Start by running `npm install` inside the project folder
 `npm run eslint` to run eslint
 `npm run build` to make a production build
 `npm run start-prod` to run your production build
+
+## 11.21 Pipeline
+
+[Project link](https://github.com/AventusM/fullstack_project_2020-2021backend)
